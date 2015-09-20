@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/bugmenot_list_item_horizontal_margin" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/darker_gray" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/darker_gray"  />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/invalid"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_invalid"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/valid"
+        android:src="@drawable/ic_valid"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_toStartOf="@id/invalid"
+        android:layout_marginStart="@dimen/bugmenot_list_item_vertical_margin"
+        android:layout_marginEnd="@dimen/bugmenot_list_item_vertical_margin"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/username_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/labels"
+        android:layout_toStartOf="@id/valid"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/white"  />
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/white"  />
+    </LinearLayout></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/stats_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+        android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin" >
+
+
+        <TextView
+            android:id="@+id/success_rate"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/votes"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/eta"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/password"
+            android:layout_marginTop="@dimen/bugmenot_list_item_vertical_margin"
+            android:layout_marginBottom="@dimen/bugmenot_list_item_vertical_margin"
+            android:textColor="@android:color/white"  />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/dark_action_bar"
+        />
+</LinearLayout>

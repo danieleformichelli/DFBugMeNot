@@ -1,0 +1,29 @@
+<resources>
+    <string name="search">Cerca</string>
+    <string name="success_rate">%1$d%% di successi</string>
+    <plurals name="votes">
+        <item quantity="zero">%d voti</item>
+        <item quantity="one">%d voto</item>
+        <item quantity="other">%d voti</item>
+    </plurals>
+    <string name="eta">%1$s fa</string>
+
+    <plurals name="days">
+        <item quantity="zero">%d giorni</item>
+        <item quantity="one">%d giorno</item>
+        <item quantity="other">%d giorni</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="zero">%d mesi</item>
+        <item quantity="one">%d mese</item>
+        <item quantity="other">%d mesi</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="zero">%d anni</item>
+        <item quantity="one">%d anno</item>
+        <item quantity="other">%d anni</item>
+    </plurals>
+    <string name="progress_dialog_title">Caricamento…</string>
+    <string name="progress_dialog_text">Download dei risultati da bugmenot.com…</string>
+    <string name="invalid_url">URL non valido</string>
+</resources>
