@@ -67,6 +67,6 @@ public class BugMeNotResult {
     }
 
     public enum EtaWeight {
-        DAYS, MONTHS, YEARS
+        HOURS, DAYS, MONTHS, YEARS
     }
 }

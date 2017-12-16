@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">DF BugMeNot</string>
     <string name="search">Search</string>
+    <string name="search_hint">Search domain/URL…</string>
     <string name="username" translatable="false">usr:</string>
     <string name="password" translatable="false">pwd:</string>
     <string name="success_rate">%1$d%% success rate</string>
@@ -10,7 +11,11 @@
         <item quantity="other">%d votes</item>
     </plurals>
     <string name="eta">%1$s ago</string>
-
+    <plurals name="hours">
+        <item quantity="zero">%d hours</item>
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
     <plurals name="days">
         <item quantity="zero">%d days</item>
         <item quantity="one">%d day</item>
@@ -29,4 +34,12 @@
     <string name="progress_dialog_title">Loading…</string>
     <string name="progress_dialog_text">Downloading results from bugmenot.com…</string>
     <string name="invalid_url">Invalid URL</string>
+    <string name="no_results">No results found</string>
+    <string name="votes_not_implemented">Votes have not been implemented yet</string>
+    <string name="add_not_implemented">Add has not been implemented yet</string>
+    <string name="copied">%1$s copied to clipboard</string>
+    <string name="barred">%1$s has been barred from the bugmenot system</string>
+    <string name="info">Info</string>
+    <string name="info_title">About</string>
+    <string name="info_msg">Unofficial app for bugmenot.com website:\n - search a domain to find shared logins\n - click on username or password to copy it into the clipboard\n - rate the login\n - share your logins\n\nSee http://bugmenot.com/terms.php</string>
 </resources>

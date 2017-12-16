@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,18 +39,33 @@ public class BugMeNotAdapter extends RecyclerView.Adapter {
                 public void onClick(View v) {
                     ClipboardManager clipboard = (ClipboardManager)
                             mContext.getSystemService(Context.CLIPBOARD_SERVICE);
-                    ClipData clip = ClipData.newPlainText("username", ((TextView) v).getText().toString());
+                    String content = ((TextView) v).getText().toString();
+                    ClipData clip = ClipData.newPlainText(v.getTag().toString(), content);
                     clipboard.setPrimaryClip(clip);
+                    Snackbar.make(v, mContext.getString(R.string.copied, content), Snackbar.LENGTH_LONG).show();
                 }
             };
 
             this.username = (TextView) v.findViewById(R.id.username);
             this.username.setOnClickListener(copyToClipBoard);
+
             this.password = (TextView) v.findViewById(R.id.password);
             this.password.setOnClickListener(copyToClipBoard);
+
             this.successRate = (TextView) v.findViewById(R.id.success_rate);
+
             this.votes = (TextView) v.findViewById(R.id.votes);
+
             this.eta = (TextView) v.findViewById(R.id.eta);
+
+            View.OnClickListener notImplemented = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Snackbar.make(v, mContext.getString(R.string.votes_not_implemented), Snackbar.LENGTH_LONG).show();
+                }
+            };
+            v.findViewById(R.id.valid).setOnClickListener(notImplemented);
+            v.findViewById(R.id.invalid).setOnClickListener(notImplemented);
         }
     }
 
@@ -87,6 +103,10 @@ public class BugMeNotAdapter extends RecyclerView.Adapter {
         int etaValue = item.getEta();
         String etaWeightedValue;
         switch (item.getEtaWeight()) {
+            case HOURS:
+                etaWeightedValue = resources.getQuantityString(R.plurals.hours, etaValue, etaValue);
+                break;
+
             case DAYS:
                 etaWeightedValue = resources.getQuantityString(R.plurals.days, etaValue, etaValue);
                 break;

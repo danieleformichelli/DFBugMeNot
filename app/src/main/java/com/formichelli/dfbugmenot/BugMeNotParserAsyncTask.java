@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BugMeNotParserAsyncTask extends AsyncTask<String, Void, List<BugMeNotResult>> {
@@ -15,8 +16,8 @@ public class BugMeNotParserAsyncTask extends AsyncTask<String, Void, List<BugMeN
 
     public BugMeNotParserAsyncTask(Context mContext, BugMeNotAdapter bugMeNotAdapter) {
         this.mContext = mContext;
-        dialog = new ProgressDialog(mContext);
         this.bugMeNotAdapter = bugMeNotAdapter;
+        this.dialog = new ProgressDialog(mContext);
     }
 
     @Override
@@ -49,7 +50,7 @@ public class BugMeNotParserAsyncTask extends AsyncTask<String, Void, List<BugMeN
         dialog.dismiss();
 
         if (bugMeNotResults == null)
-            Log.e("DFBugMeNot", "IOException");
+            bugMeNotResults = new ArrayList<>();
 
         bugMeNotAdapter.replace(bugMeNotResults);
     }

@@ -7,7 +7,11 @@
         <item quantity="other">%d voti</item>
     </plurals>
     <string name="eta">%1$s fa</string>
-
+    <plurals name="hours">
+        <item quantity="zero">%d ore</item>
+        <item quantity="one">%d ora</item>
+        <item quantity="other">%d ore</item>
+    </plurals>
     <plurals name="days">
         <item quantity="zero">%d giorni</item>
         <item quantity="one">%d giorno</item>
@@ -26,4 +30,13 @@
     <string name="progress_dialog_title">Caricamento…</string>
     <string name="progress_dialog_text">Download dei risultati da bugmenot.com…</string>
     <string name="invalid_url">URL non valido</string>
+    <string name="no_results">Nessun risultato trovato</string>
+    <string name="add_not_implemented">L\'aggiunta di account non è stata ancora implementata</string>
+    <string name="votes_not_implemented">La votazione non è stata ancora implementata</string>
+    <string name="copied">%1$s copiato negli appunti</string>
+    <string name="barred">Gli account %1$s sono vietati su bugmenot</string>
+    <string name="search_hint">Cerca dominio/URL…</string>
+    <string name="info">Info</string>
+    <string name="info_msg">App non ufficiale del sito bugmenot.com:\n - cerca un dominio per trovare login condivisi\n - clicca su username o password per copiarli negli appunti\n - vota i login\n - condividi i tuoi login\n\nLeggi http://bugmenot.com/terms.php</string>
+    <string name="info_title">Info</string>
 </resources>
