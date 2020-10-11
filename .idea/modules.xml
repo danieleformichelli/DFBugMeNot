@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DFBugMeNot.iml" filepath="$PROJECT_DIR$/DFBugMeNot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jsoup-1.8.3/jsoup-1.8.3.iml" filepath="$PROJECT_DIR$/jsoup-1.8.3/jsoup-1.8.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DFBugMeNot.iml" filepath="$PROJECT_DIR$/DFBugMeNot.iml" group="DFBugMeNot" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DFBugMeNot/app" />
+      <module fileurl="file://$PROJECT_DIR$/jsoup-1.8.3/jsoup-1.8.3.iml" filepath="$PROJECT_DIR$/jsoup-1.8.3/jsoup-1.8.3.iml" group="DFBugMeNot/jsoup-1.8.3" />
     </modules>
   </component>
 </project>
